@@ -1,0 +1,142 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+    padding: 0;
+    margin: 0;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+fieldset {
+    border: none;
+    margin: 0;
+    display: inline-block;
+}
+input {
+    font-size: 1em;
+    outline: none;
+}
+input[type="text"] {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border: none;
+    margin: .25em;
+    padding: .25em .5em;
+    background: transparent;
+}
+
+::-webkit-input-placeholder { color: white; opacity: .2; }
+:-moz-placeholder { color: white; opacity: .2; }
+::-moz-placeholder { color: white; opacity: .2; }
+:-ms-input-placeholder { color: white; opacity: .2; }
+
+input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+}
+button {
+    font-size: inherit;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+}
+
+.todo-app input, .todo-app button {
+    padding: .5em;
+}
+
+.todo-app {
+    margin: auto;
+    width: 100%;
+}
+
+.create-todo {
+    background: #48f;
+    padding: .5em 1em;
+}
+.create-todo fieldset {
+    float: right;
+    padding: .25em 0;
+}
+.create-todo input {
+    color: white;
+    width: 40%;
+}
+.create-todo button {
+    color: #fff;
+}
+.create-todo .toggle {
+    float: none;
+    margin: 0;
+}
+
+.todo-app .toggle {
+    text-align: center;
+    height: auto;
+    margin: auto 0;
+    /* Mobile Safari */
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+.toggle:after {
+    content: '✓';
+}
+
+.todo-list .toggle:after {
+    color: #ddd;
+}
+
+.todo-app .toggle:checked:after {
+    color: #4c6;
+}
+
+.todo-item {
+    padding: .5em 1em;
+}
+.todo-item input[type="text"] {
+    width: 60%;
+}
+.todo-item .remove {
+    color: #ddd;
+    float: right;
+    margin: .5em;
+}
+.todo-item:hover .remove {
+    cursor: pointer;
+}
+
+@media only screen and (min-width : 651px) {
+    body {
+        font-size: 1.5em;
+    }
+    .create-todo input {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width : 801px) {
+    .todo-app {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width : 1025px) {
+    .todo-app {
+        width: 60%;
+    }
+    .create-todo input {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width : 1281px) {
+    .todo-app {
+        width: 50%;
+    }
+}

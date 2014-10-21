@@ -1,0 +1,19 @@
+{
+  "name": "spring-rest-todos",
+  "version": "0.0.0",
+  "description": "",
+  "main": "main.js",
+  "moduleType": ["node"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "brian@hovercraftstudios.com",
+  "license": "MIT",
+  "dependencies": {
+    "fabulous": "briancavalier/fabulous#master",
+    "jiff": "~0.6",
+    "rave": "~0.4",
+    "rest": "^1.2",
+    "when": "~3.5"
+  }
+}

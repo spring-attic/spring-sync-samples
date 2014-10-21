@@ -1,0 +1,59 @@
+buildscript {
+	repositories {
+		maven { url "http://repo.spring.io/libs-release" }
+		mavenLocal()
+	}
+	dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.4.RELEASE") }
+}
+
+apply plugin: "java"
+apply plugin: "eclipse"
+apply plugin: "eclipse-wtp"
+apply plugin: "idea"
+apply plugin: "spring-boot"
+apply plugin: "war"
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+jar {
+	baseName = "spring-rest-todos"
+	version =  "0.1.0"
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+    maven { url "http://repo.spring.io/libs-snapshot" }
+	maven { url "http://repo.spring.io/libs-release" }
+}
+
+dependencies {
+	compile("org.springframework.boot:spring-boot-starter-web")
+	compile("org.springframework.boot:spring-boot-starter-data-jpa")
+	compile("org.springframework.sync:spring-sync:1.0.0.BUILD-SNAPSHOT")
+	compile("com.h2database:h2")
+	compile("com.fasterxml.jackson.core:jackson-databind")
+	compile("commons-lang:commons-lang:2.6")
+	compile fileTree(dir: 'libs', include: '*.jar')
+	compile("com.github.fge:jackson-coreutils:1.5")
+	
+	
+	compile("com.googlecode.java-diff-utils:diffutils:1.2.1")
+	
+	
+	testCompile("org.springframework.boot:spring-boot-starter-test")
+	testCompile("com.jayway.jsonpath:json-path:0.8.1")
+	testCompile("com.jayway.jsonpath:json-path-assert:0.8.1")
+}
+
+task wrapper(type: Wrapper) { gradleVersion = "2.0" }
+
+task clientInstall(type:Exec) {
+	logging.captureStandardOutput LogLevel.INFO
+	logging.captureStandardError LogLevel.LIFECYCLE
+	workingDir './src/main/resources/public'
+	commandLine 'bower', 'install'
+}
+
+war.dependsOn clientInstall
