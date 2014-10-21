@@ -1,0 +1,77 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 2em;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.scoreboard {
+    font-weight: bold;
+    text-align: center;
+}
+
+.scoreboard h2 {
+    margin: 0;
+    padding: .25em 0;
+    background: black;
+    color: white;
+    text-align: center;
+    width: auto;
+}
+
+.scoreboard ul {
+    margin: 0;
+    padding: 0;
+}
+
+.scoreboard li {
+    list-style-type: none;
+}
+
+.game {
+    border-top: 1px solid black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.name, .score {
+    margin: 0;
+    padding: .5em;
+    display: inline-block;
+    text-align: right;
+}
+
+.name {
+    width: 6em;
+}
+
+.score {
+    text-align: left;
+}
+
+@media only screen and (min-width: 801px) {
+    .game {
+        border: none;
+        display: inline-block;
+        width: auto;
+        margin: 0.5em;
+    }
+    .name {
+        width: 5em;
+    }
+    .score {
+        background: black;
+        color: white;
+        width: 2em;
+    }
+}

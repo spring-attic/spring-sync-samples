@@ -1,0 +1,36 @@
+{
+	"name": "scores",
+	"version": "0.0.0",
+	"homepage": "https://github.com/briancavalier/scores",
+	"authors": [
+		"Brian Cavalier <brian@hovercraftstudios.com>"
+	],
+	"main": "main.js",
+	"rave": {
+		"overrides": {
+			"stomp-websocket": {
+				"main": "lib/stomp.min.js"
+			},
+			"sockjs-client": {
+				"moduleType": ["amd"]
+			}
+		}
+	},
+	"moduleType": [
+		"node"
+	],
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"rave": "~0.3",
+		"fabulous": "briancavalier/fabulous",
+		"sockjs-client": "bower-sockjs-client#~0.3.4",
+		"stomp-websocket": "~2.3.3"
+	}
+}

@@ -1,0 +1,28 @@
+<html data-debug="">
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="main.css"/>
+    <script src="bower_components/rave/rave.js"></script>
+</head>
+<body>
+
+<section class="scoreboard">
+    <h2>Scoreboard</h2>
+
+    <ul data-model="games">
+        <li class="game" data-list=""> <!-- thymeleaf parser fails without ="" -->
+            <div class="home">
+                <span class="name">{{homeTeam}}</span>
+                <span class="score">{{homeTeamScore}}</span>
+            </div>
+            <div class="away">
+                <span class="name">{{awayTeam}}</span>
+                <span class="score">{{awayTeamScore}}</span>
+            </div>
+        </li>
+    </ul>
+</section>
+
+</body>
+</html>

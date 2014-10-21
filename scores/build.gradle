@@ -1,0 +1,59 @@
+buildscript {
+    ext {
+        springBootVersion = '1.1.4.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot' 
+
+jar {
+    baseName = 'scores'
+    version =  '0.0.1-SNAPSHOT'
+}
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories {
+	mavenLocal()
+    maven { url "http://repo.spring.io/libs-snapshot" }
+	maven { url "http://repo.spring.io/libs-release" }
+    mavenCentral()
+}
+
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-websocket")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+	compile("org.springframework.sync:spring-sync:1.0.0.BUILD-SNAPSHOT")
+    compile("org.springframework:spring-messaging")
+    
+    compile("org.aspectj:aspectjweaver:1.8.1")
+    
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+
+    compile("org.webjars:jquery:2.0.3-1")
+    compile("org.webjars:sockjs-client:0.3.4")
+    compile("org.webjars:stomp-websocket:2.3.0")
+    
+}
+
+eclipse {
+    classpath {
+         containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
+         containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7'
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
