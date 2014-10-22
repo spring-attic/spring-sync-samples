@@ -3,7 +3,7 @@ var jiff = require('jiff');
 var stomp = require('stomp-websocket');
 var SockJS = require('sockjs-client');
 
-module.exports = fab.run(document.querySelector('.scoreboard'), gameDayView);
+module.exports = fab.runAt(document.querySelector('.scoreboard'), gameDayView);
 
 function gameDayView(node, context) {
 	var stomp = Stomp.over(new SockJS('/scores'));
