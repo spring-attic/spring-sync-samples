@@ -57,3 +57,15 @@ eclipse {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.0'
 }
+
+task clientInstall(type:Exec) {
+    logging.captureStandardOutput LogLevel.INFO
+    logging.captureStandardError LogLevel.LIFECYCLE
+    workingDir './src/main/resources/public'
+    commandLine 'bower', 'install'
+}
+
+build.dependsOn clientInstall
+bootRun.dependsOn clientInstall
+
+
