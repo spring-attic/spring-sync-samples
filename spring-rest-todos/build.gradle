@@ -24,14 +24,14 @@ jar {
 repositories {
 	mavenLocal()
 	mavenCentral()
-    maven { url "http://repo.spring.io/libs-snapshot" }
+    maven { url "http://repo.spring.io/libs-milestone" }
 	maven { url "http://repo.spring.io/libs-release" }
 }
 
 dependencies {
 	compile("org.springframework.boot:spring-boot-starter-web")
 	compile("org.springframework.boot:spring-boot-starter-data-jpa")
-	compile("org.springframework.sync:spring-sync:1.0.0.BUILD-SNAPSHOT")
+	compile("org.springframework.sync:spring-sync:1.0.0.M1")
 	compile("com.h2database:h2")
 	compile("com.fasterxml.jackson.core:jackson-databind")
 	compile("commons-lang:commons-lang:2.6")

@@ -24,7 +24,7 @@ targetCompatibility = 1.7
 
 repositories {
 	mavenLocal()
-    maven { url "http://repo.spring.io/libs-snapshot" }
+    maven { url "http://repo.spring.io/libs-milestone" }
 	maven { url "http://repo.spring.io/libs-release" }
     mavenCentral()
 }
@@ -34,7 +34,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-websocket")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
-	compile("org.springframework.sync:spring-sync:1.0.0.BUILD-SNAPSHOT")
+	compile("org.springframework.sync:spring-sync:1.0.0.M1")
     compile("org.springframework:spring-messaging")
     
     compile("org.aspectj:aspectjweaver:1.8.1")
