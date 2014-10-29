@@ -28,8 +28,9 @@
 		"tests"
 	],
 	"dependencies": {
-		"rave": "~0.3",
-		"fabulous": "briancavalier/fabulous",
+		"rave": "~0.4",
+		"fabulous": "briancavalier/fabulous#0.0.1",
+		"jiff": "~0.6",
 		"sockjs-client": "bower-sockjs-client#~0.3.4",
 		"stomp-websocket": "~2.3.3"
 	}
