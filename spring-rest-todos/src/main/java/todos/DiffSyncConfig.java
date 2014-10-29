@@ -20,7 +20,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.sync.diffsync.PersistenceCallbackRegistry;
 import org.springframework.sync.diffsync.config.DiffSyncConfigurerAdapter;
-import org.springframework.sync.diffsync.config.EnableDifferentialSynchronization;
+import org.springframework.sync.diffsync.web.config.EnableDifferentialSynchronization;
 
 @Configuration
 @EnableDifferentialSynchronization
