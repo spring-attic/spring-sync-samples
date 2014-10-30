@@ -25,7 +25,7 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.sync.Diff;
 import org.springframework.sync.Patch;
-import org.springframework.sync.json.JsonPatchMaker;
+import org.springframework.sync.json.JsonPatchPatchConverter;
 
 @Aspect
 @Component
@@ -50,7 +50,7 @@ public class UpdatePublicationAspect {
 		jp.proceed();
 
 		Patch diff = Diff.diff(original, updated);
-		messaging.convertAndSend("/topic/scores", new JsonPatchMaker().toJsonNode(diff));
+		messaging.convertAndSend("/topic/scores", new JsonPatchPatchConverter().convert(diff));
 	}
 	
 }
