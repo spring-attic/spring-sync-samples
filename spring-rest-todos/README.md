@@ -1,17 +1,33 @@
 # Spring REST Todos
 
-[![Build Status](https://drone.io/github.com/royclarkson/spring-rest-todos/status.png)](https://drone.io/github.com/royclarkson/spring-rest-todos/latest)
+A simple todo list sample application built with Spring
 
-A simple todo list example built with Spring
+## Prerequisites
+
+This sample app requires the [Bower](http://bower.io) package manager. Use npm to install Bower:
+
+```sh
+npm install -g bower
+```
+
+Use Bower to install the required packages:
+
+```sh
+cd src/main/resources/public
+bower install
+```
 
 ## Build and Run
 
-> **NOTE:**
-> This project now depends on org.springframework:spring-sync:0.5.0.RELEASE. This project is not (yet) in any known Maven repository. Therefore, you'll need to clone it from https://github.com/habuma/spring-sync and do 'gradle build install' to get it into your local repository.
+Use Gradle to build the Spring app:
 
 ```sh
 ./gradlew clean build bootRun
 ```
+
+Open the following URL in your browser:
+
+http://localhost:8080/index.html
 
 ## Test
 
@@ -52,17 +68,3 @@ Generate a JSON PATCH from a modified todo list:
 ```sh
 curl -X "POST" -v localhost:8080/todos/diff -H "Content-Type: application/json" -d '[{"description":"go go go!","complete":false},{"description":"b","complete":false}]'
 ```
-
-## Run the Web Client
-
-### Setup
-
-```sh
-npm install -g bower
-cd public
-bower install
-```
-
-### Open in Browser
-
-Go to http://localhost:8080/index.html
