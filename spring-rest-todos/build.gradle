@@ -43,7 +43,7 @@ dependencies {
 	testCompile("com.jayway.jsonpath:json-path-assert:0.8.1")
 }
 
-task wrapper(type: Wrapper) { gradleVersion = "2.0" }
+task wrapper(type: Wrapper) { gradleVersion = "2.1" }
 
 task clientInstall(type:Exec) {
 	logging.captureStandardOutput LogLevel.INFO
