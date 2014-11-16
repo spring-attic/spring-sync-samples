@@ -10,10 +10,7 @@
   "author": "brian@hovercraftstudios.com",
   "license": "MIT",
   "dependencies": {
-    "fabulous": "briancavalier/fabulous#master",
-    "jiff": "~0.6",
-    "rave": "~0.4",
-    "rest": "^1.2",
-    "when": "~3.5"
+    "fabulous": "briancavalier/fabulous#0.0.1",
+    "rave": "~0.4"
   }
 }
